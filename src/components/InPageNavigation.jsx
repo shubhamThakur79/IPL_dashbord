@@ -63,7 +63,7 @@ const InPageNavigation = ({ teams, children }) => {
                                 <button 
                                     ref={i === 0 ? btnRef : null} 
                                     key={i} 
-                                    className={`font-bold   bg-gray-200/30 text-white px-[83px] mx-[2px] overflow-x-hidden lg:px-[170px]   py-2 ${index === i ? "text-black" : "text-gray-400"}`} 
+                                    className={`font-bold   bg-gray-200/30 text-white px-[83px] mx-[2px] overflow-x-hidden lg:px-[150px]   py-2 ${index === i ? "text-black" : "text-gray-400"}`} 
                                     onClick={(e) => {
                                         toggleBtn(e.target, i)
                                         styleBorder()
