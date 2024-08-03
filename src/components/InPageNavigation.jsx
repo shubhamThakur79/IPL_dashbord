@@ -45,7 +45,7 @@ const InPageNavigation = ({ teams, children }) => {
                                     <button 
                                         ref={i === 0 ? btnRef : null} 
                                         key={i} 
-                                        className={`font-bold focus:bg-gray-100/20 hover:bg-gray-100/20 text-white ml-[9px] lg:ml-7 px-8 lg:px-20 py-2 lg:py-4 ${index === i ? "text-black" : "text-gray-400"}`} 
+                                        className={`font-bold focus:bg-gray-100/20 hover:bg-gray-100/20 text-white ml-[9px] lg:ml-1 lg:mx-1  px-8 lg:px-20 py-2 lg:py-4 ${index === i ? "text-black" : "text-gray-400"}`} 
                                         onClick={(e) => {
                                             toggleBtn(e.target, i)
                                         }} 
