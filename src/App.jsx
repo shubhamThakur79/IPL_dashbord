@@ -3,7 +3,7 @@ import Home from "./components/Home"
 import MatchDetails from "./components/MatchDetails"
 import Navbar from "./components/Navbar"
 import PointsTable from "./components/PointsTable"
-
+import News from "./components/News"
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/matchdetails/:id" element={<MatchDetails />} />
               <Route path="/pointsTable" element={<PointsTable />} />
-              <Route path="/news" element={<h1>Coming Soon...</h1>} />
+              <Route path="/news" element={<h1><News/></h1>} />
 
             </Route>
 
