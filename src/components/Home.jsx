@@ -53,10 +53,10 @@ function Home() {
                     matchDesc: singleMatch.matchInfo.matchDesc,
                     matchDate: singleMatch.matchInfo.matchDate,
                     team1: singleMatch.matchInfo.team1,
-                    team1Img: `https://path-to-images/${singleMatch?.matchInfo?.team?.imageId}`, // Adjust the URL as necessary
+                    team1Img: `https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${singleMatch?.matchInfo?.team?.imageId}`, // Adjust the URL as necessary
                     team1Score: singleMatch.matchScore?.team1Score?.inngs1 || {},
                     team2: singleMatch.matchInfo.team2,
-                    team2Img: `https://path-to-images/${singleMatch?.matchInfo?.team2?.imageId}`, // Adjust the URL as necessary
+                    team2Img: `https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${singleMatch?.matchInfo?.team2?.imageId}`, // Adjust the URL as necessary
                     team2Score: singleMatch.matchScore?.team2Score?.inngs1 || {},
                     status: singleMatch.matchInfo.status,
                     matchKey: matches.matchDetailsMap.key,
