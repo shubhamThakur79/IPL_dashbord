@@ -18,7 +18,7 @@ function Home() {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      const filterData = result.matchDetails.filter((data) => data["matchDetailsMap"]);
+      const filterData = result?.matchDetails?.filter((data) => data["matchDetailsMap"]);
       setMetcheData(filterData);
     } catch (error) {
       console.error(error);
@@ -35,8 +35,8 @@ function Home() {
     <div className="bg-background text-foreground  rounded-lg shadow-lg ">
       <h2 className="text-xl font-bold my-4 mx-3">Match Results</h2>
       <div className="grid  grid-cols-1 md:grid-cols-2 ">
-        {matcheData.map((matches, i) => {
-          return matches.matchDetailsMap.match.map((singleMatch, j) => {
+        {matcheData?.map((matches, i) => {
+          return matches?.matchDetailsMap?.match?.map((singleMatch, j) => {
             // const team1Score = singleMatch.matchScore?.team1Score?.inngs1 || {};
             // const team2Score = singleMatch.matchScore?.team2Score?.inngs1 || {};
             // console.log("team1 score" + team1Score)

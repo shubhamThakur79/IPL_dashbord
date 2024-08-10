@@ -19,7 +19,7 @@ const PointsTable = () => {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            setTableData(result.pointsTable[0].pointsTableInfo);
+            setTableData(result?.pointsTable[0]?.pointsTableInfo || []);
         } catch (error) {
             console.error(error);
         }
@@ -53,14 +53,14 @@ const PointsTable = () => {
                     tableData.map((table, i) => (
                         <tr className='h-[40px] border-b border-gray-400/40 hover:bg-gray-300/20 ' key={i}>
                             <td className='flex lg:gap-1 mr-1   lg:w-[80%] items-center justify-center'>{i + 1}
-                                <img className='w-5 h-5 mr-2 object-contain' src={`https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${table.teamImageId}`} alt={`${table.teamFullName} logo`} />
-                                {table.teamName}
+                                <img className='w-5 h-5 mr-2 object-contain' src={`https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${table?.teamImageId}`} alt={`${table?.teamFullName} logo`} />
+                                {table?.teamName}
                                            </td>
-                            <td>{table.matchesPlayed}</td>
-                            <td>{table.matchesWon}</td>
-                            <td>{table.matchesLost}</td>
-                            <td>{table.nrr}</td>
-                            <td>{table.points}</td>
+                            <td>{table?.matchesPlayed}</td>
+                            <td>{table?.matchesWon}</td>
+                            <td>{table?.matchesLost}</td>
+                            <td>{table?.nrr}</td>
+                            <td>{table?.points}</td>
                             <td className='h-full text-center flex justify-center items-center ml-[-2px'>
                                 {[...table.form].reverse().map((result, j) => (
                                     <td key={j} className=''>
