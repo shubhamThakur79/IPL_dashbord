@@ -16,7 +16,7 @@ const News = () => {
     }
 
     useEffect(() => {
-        // fetchNews();
+        fetchNews();
     }, []);
 
     const formatDate = (dateString) => {
