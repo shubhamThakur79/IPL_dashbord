@@ -44,22 +44,22 @@ function Home() {
             matches?.matchDetailsMap?.match?.map((singleMatch, j) => (
               <Link
                 key={`${i}-${j}`}
-                to={`/matchdetails/${singleMatch.matchInfo.matchId}`}
+                to={`/matchdetails/${singleMatch?.matchInfo?.matchId}`}
                 className="w-full border-3 border-black rounded-lg overflow-hidden"
               >
                 <MatchResult
                   matchInfo={{
-                    matchFormat: singleMatch.matchInfo.matchFormat,
-                    matchDesc: singleMatch.matchInfo.matchDesc,
-                    matchDate: singleMatch.matchInfo.matchDate,
-                    team1: singleMatch.matchInfo.team1,
+                    matchFormat: singleMatch?.matchInfo?.matchFormat,
+                    matchDesc: singleMatch?.matchInfo?.matchDesc,
+                    matchDate: singleMatch?.matchInfo?.matchDate,
+                    team1: singleMatch?.matchInfo?.team1,
                     team1Img: `https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${singleMatch?.matchInfo?.team?.imageId}`, // Adjust the URL as necessary
-                    team1Score: singleMatch.matchScore?.team1Score?.inngs1 || {},
-                    team2: singleMatch.matchInfo.team2,
+                    team1Score: singleMatch?.matchScore?.team1Score?.inngs1 || {},
+                    team2: singleMatch?.matchInfo?.team2,
                     team2Img: `https://res.cloudinary.com/digkgdovw/image/upload/v1715267905/iplTeamLogo/${singleMatch?.matchInfo?.team2?.imageId}`, // Adjust the URL as necessary
-                    team2Score: singleMatch.matchScore?.team2Score?.inngs1 || {},
-                    status: singleMatch.matchInfo.status,
-                    matchKey: matches.matchDetailsMap.key,
+                    team2Score: singleMatch?.matchScore?.team2Score?.inngs1 || {},
+                    status: singleMatch?.matchInfo?.status,
+                    matchKey: matches?.matchDetailsMap?.key,
                   }}
                 />
               </Link>

@@ -16,9 +16,9 @@ const PointsTable = () => {
         };
 
         try {
-            const response = await fetch(url, options);
-            const result = await response.json();
-            setTableData(result?.pointsTable[0]?.pointsTableInfo || []);
+            const response = await fetch(url);
+            const result = await response?.json();
+            setTableData(result?.pointsTable[0]?.pointsTableInfo );
         } catch (error) {
             console.error('Error fetching points table data:', error);
         }
