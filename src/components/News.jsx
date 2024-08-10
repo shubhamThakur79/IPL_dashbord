@@ -288,17 +288,17 @@ const News = () => {
         const date = new Date(dateString);
         return date.toLocaleDateString(undefined, options);
     };
-    console.log(news)
+    // console.log(news)
     return (
 
         <div className='pb-10'>
-            {news.length > 0 ? news.map((newsData, i) => {
+            {news ? news.map((newsData, i) => {
 
                 return <div className='md:px-8 mx-2 my-3 md:my-3  ' key={i}>
-                
+
 
                     <a className='flex mt-4 flex-col md:flex-row border border-white/20 items-center justify-center rounded-xl overflow-hidden' target='_blank' href={newsData?.url}>
-                    <div>
+                        <div>
                             <img className='max-w-[100%] md:hidden block h-[60%] rounded-xl'
                                 src={newsData.urlToImage || "https://plus.unsplash.com/premium_photo-1688561384438-bfa9273e2c00?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3c3xlbnwwfHwwfHx8MA%3D%3D"}
                             />
@@ -313,11 +313,11 @@ const News = () => {
                             />
                         </div>
                     </a>
-           
+
                 </div>
             }) : <h1>News loading...</h1>}
 
-<h1 className='text-center text-xl text-gray-400 font-mono'>Have a greate day!</h1>   
+            <h1 className='text-center text-xl text-gray-400 font-mono'>Have a greate day!</h1>
         </div>
     )
 }
